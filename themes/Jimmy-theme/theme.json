@@ -7,24 +7,34 @@
 		"color": {
 			"palette": [
 				{
-					"slug": "base",
+					"slug": "black",
 					"color": "#1e1e1e",
-					"name": "Base"
+					"name": "Black"
 				},
 				{
-					"slug": "contrast",
+					"slug": "white",
 					"color": "#f0f0f0",
-					"name": "Contrast"
+					"name": "White"
 				},
 				{
 					"slug": "primary",
-					"color": "#0073aa",
+					"color": "#e5e5e5",
 					"name": "Primary"
 				},
 				{
 					"slug": "secondary",
 					"color": "#00a0d2",
 					"name": "Secondary"
+				},
+				{
+					"slug": "accent",
+					"color": "#da70d6",
+					"name": "Accent"
+				},
+				{
+					"slug": "transparent",
+					"color": "transparent",
+					"name": "Transparent"
 				}
 			]
 		},

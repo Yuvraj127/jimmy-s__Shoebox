@@ -61,3 +61,64 @@ function shoecare_pt() {
    register_post_type( 'shoecare_pt', $args );
 
 }
+
+
+add_action( 'init', 'shoe_review_pt' );
+
+function shoe_review_pt() {
+
+   $labels = array(
+
+      'name'                     => __( 'Announcements', 'shoe review' ),
+      'singular_name'            => __( 'Announcement', 'shoe review' ),
+      'add_new'                  => __( 'Add New', 'shoe review' ),
+      'add_new_item'             => __( 'Add New Announcement', 'shoe review' ),
+      'edit_item'                => __( 'Edit Announcement', 'shoe review' ),
+      'new_item'                 => __( 'New Announcement', 'shoe review' ),
+      'view_item'                => __( 'View Announcement', 'shoe review' ),
+      'view_items'               => __( 'View Announcements', 'shoe review' ),
+      'search_items'             => __( 'Search Announcements', 'shoe review' ),
+      'not_found'                => __( 'No Announcements found.', 'shoe review' ),
+      'not_found_in_trash'       => __( 'No Announcements found in Trash.', 'shoe review' ),
+      'parent_item_colon'        => __( 'Parent Announcements:', 'shoe review' ),
+      'all_items'                => __( 'All Announcements', 'shoe review' ),
+      'archives'                 => __( 'Announcement Archives', 'shoe review' ),
+      'attributes'               => __( 'Announcement Attributes', 'shoe review' ),
+      'insert_into_item'         => __( 'Insert into Announcement', 'shoe review' ),
+      'uploaded_to_this_item'    => __( 'Uploaded to this Announcement', 'shoe review' ),
+      'featured_image'           => __( 'Featured Image', 'shoe review' ),
+      'set_featured_image'       => __( 'Set featured image', 'shoe review' ),
+      'remove_featured_image'    => __( 'Remove featured image', 'shoe review' ),
+      'use_featured_image'       => __( 'Use as featured image', 'shoe review' ),
+      'menu_name'                => __( 'Announcements', 'shoe review' ),
+      'filter_items_list'        => __( 'Filter Announcement list', 'shoe review' ),
+      'filter_by_date'           => __( 'Filter by date', 'shoe review' ),
+      'items_list_navigation'    => __( 'Announcements list navigation', 'shoe review' ),
+      'items_list'               => __( 'Announcements list', 'shoe review' ),
+      'item_published'           => __( 'Announcement published.', 'shoe review' ),
+      'item_published_privately' => __( 'Announcement published privately.', 'shoe review' ),
+      'item_reverted_to_draft'   => __( 'Announcement reverted to draft.', 'shoe review' ),
+      'item_scheduled'           => __( 'Announcement scheduled.', 'shoe review' ),
+      'item_updated'             => __( 'Announcement updated.', 'shoe review' ),
+      'item_link'                => __( 'Announcement Link', 'shoe review' ),
+      'item_link_description'    => __( 'A link to an announcement.', 'shoe review' ),
+
+   );
+
+   $args = array(
+
+      'labels'                => $labels,
+      'public'                => true,
+      'has_archive'           => true,
+      'show_in_rest'          => true,
+      'menu_icon'             => 'dashicons-megaphone',
+      'capability_type'       => 'post',
+      'capabilities'          => array(),
+      'supports'              => array( 'title', 'editor', 'revisions' ),
+      'rewrite'               => array( 'slug' => 'shoe review' ),
+   );
+
+   register_post_type( 'shoe_review_pt', $args );
+
+}
+
